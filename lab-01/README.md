@@ -184,12 +184,6 @@ Place the screenshots in the `./screenshots/` folder. They will automatically be
 
 ---
 
-### 5. Native HTTP Server (`basic-server.js`)
-*Shows HTTP 200 OK with "Hello" on port 3000.*
-![Basic Server Screenshot](./screenshots/basic-server.png)
-
----
-
 ## Problems Faced and Solutions
 
 During the implementation of Lab 1, the following challenges were encountered and resolved:

@@ -1,23 +1,21 @@
-# Screenshots Directory
+# Lab 1 Route Verification Screenshots
 
-Save your captured browser screenshots in this folder with the following filenames so they link automatically to `README.md`:
+This directory contains browser verification screenshots for all implemented endpoints:
 
-1. **`welcome-route.png`**  
-   Screenshot of the browser visiting `http://localhost:3000/` (or live Render URL) showing the welcome message.
+### 1. Root Endpoint (`GET /`)
+![Welcome Route](./welcome-route.png)
 
-2. **`about-route.png`**  
-   Screenshot of the browser visiting `http://localhost:3000/about` showing student details JSON.
+---
 
-3. **`time-route.png`**  
-   Screenshot of the browser visiting `http://localhost:3000/time` showing current time JSON.
+### 2. About Endpoint (`GET /about`)
+![About Route](./about-route.png)
 
-4. **`404-route.png`**  
-   Screenshot of the browser visiting `http://localhost:3000/invalid-route` showing the 404 Not Found JSON and status code.
+---
 
-5. **`basic-server.png`** *(Optional / Bonus)*  
-   Screenshot of visiting `http://localhost:3000/` when running `node basic-server.js` showing "Hello".
+### 3. Time Endpoint (`GET /time`)
+![Time Route](./time-route.png)
 
-> **Tip for taking screenshots on Windows:**
-> - Press `Windows Key + Shift + S` to open the Snipping Tool.
-> - Select the area (browser window with URL bar and DevTools Network tab open).
-> - Save the image into this `screenshots/` folder.
+---
+
+### 4. 404 Response for Unknown Routes (`GET /invalid-route`)
+![404 Route](./404-route.png)
