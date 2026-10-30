@@ -1,0 +1,23 @@
+{
+  "name": "lab-01",
+  "version": "1.0.0",
+  "description": "Backend Development Fundamentals Lab 1 - Node.js and Express Server",
+  "main": "server.js",
+  "scripts": {
+    "start": "node server.js",
+    "dev": "node --watch server.js",
+    "basic": "node basic-server.js"
+  },
+  "keywords": [
+    "nodejs",
+    "express",
+    "bdf",
+    "lab-01",
+    "backend"
+  ],
+  "author": "Uday Sai Sriman (252U1R8005)",
+  "license": "ISC",
+  "dependencies": {
+    "express": "^5.3.0"
+  }
+}
