@@ -132,8 +132,12 @@ The Express server implements the following endpoints:
 
 ## Live Deployment Link
 
-- **Production URL:** `https://your-deployment-name.onrender.com`  
-  *(Replace this placeholder with your live Render Web Service URL after deployment, e.g. `https://bdf-lab1-252u1r8005.onrender.com`)*
+- **Production URL:** [https://backend-development-fundamentals-n5u8.onrender.com](https://backend-development-fundamentals-n5u8.onrender.com)
+- **Live Endpoints:**
+  - **Welcome (`GET /`):** [https://backend-development-fundamentals-n5u8.onrender.com/](https://backend-development-fundamentals-n5u8.onrender.com/)
+  - **About (`GET /about`):** [https://backend-development-fundamentals-n5u8.onrender.com/about](https://backend-development-fundamentals-n5u8.onrender.com/about)
+  - **Time (`GET /time`):** [https://backend-development-fundamentals-n5u8.onrender.com/time](https://backend-development-fundamentals-n5u8.onrender.com/time)
+  - **404 Route (`GET /invalid-route`):** [https://backend-development-fundamentals-n5u8.onrender.com/invalid-route](https://backend-development-fundamentals-n5u8.onrender.com/invalid-route)
 
 ---
 

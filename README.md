@@ -17,18 +17,18 @@ Backend Development Fundamentals lab assignments and practical projects complete
 
 ## Lab Directory Index
 
-| Lab | Title | Tech Stack | Status | Directory Link |
-| :---: | :--- | :--- | :---: | :--- |
-| **Lab 01** | Node.js and Express Server | Node.js, Express.js | Completed | [lab-01/](./lab-01/) |
-| **Lab 02** | *Upcoming Lab* | — | Planned | — |
-| **Lab 03** | *Upcoming Lab* | — | Planned | — |
-| **Lab 04** | *Upcoming Lab* | — | Planned | — |
-| **Lab 05** | *Upcoming Lab* | — | Planned | — |
-| **Lab 06** | *Upcoming Lab* | — | Planned | — |
-| **Lab 07** | *Upcoming Lab* | — | Planned | — |
-| **Lab 08** | *Upcoming Lab* | — | Planned | — |
-| **Lab 09** | *Upcoming Lab* | — | Planned | — |
-| **Lab 10** | *Upcoming Lab* | — | Planned | — |
+| Lab | Title | Tech Stack | Status | Directory Link | Live Deployment |
+| :---: | :--- | :--- | :---: | :--- | :--- |
+| **Lab 01** | Node.js and Express Server | Node.js, Express.js | Completed | [lab-01/](./lab-01/) | [Render App](https://backend-development-fundamentals-n5u8.onrender.com) |
+| **Lab 02** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 03** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 04** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 05** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 06** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 07** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 08** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 09** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 10** | *Upcoming Lab* | — | Planned | — | — |
 
 ---
 
