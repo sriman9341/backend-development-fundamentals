@@ -20,7 +20,7 @@ Backend Development Fundamentals lab assignments and practical projects complete
 | Lab | Title | Tech Stack | Status | Directory Link | Live Deployment |
 | :---: | :--- | :--- | :---: | :--- | :--- |
 | **Lab 01** | Node.js and Express Server | Node.js, Express.js | Completed | [lab-01/](./lab-01/) | [Render App](https://backend-development-fundamentals-n5u8.onrender.com) |
-| **Lab 02** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 02** | SQLite Database and CRUD Routes | Express.js, SQLite3 | Completed | [lab-02/](./lab-02/) | Local Verified / Render Ready |
 | **Lab 03** | *Upcoming Lab* | — | Planned | — | — |
 | **Lab 04** | *Upcoming Lab* | — | Planned | — | — |
 | **Lab 05** | *Upcoming Lab* | — | Planned | — | — |
@@ -38,12 +38,23 @@ Backend Development Fundamentals lab assignments and practical projects complete
 backend-development-fundamentals/
 ├── README.md               # Course repository overview and student details
 ├── .gitignore              # Global gitignore for all labs
-└── lab-01/                 # Lab 1: Node.js & Express Server
-    ├── basic-server.js     # Native Node HTTP server on port 3000
-    ├── server.js           # Express server with routes /, /about, /time, 404
-    ├── package.json        # Dependencies and scripts
+├── lab-01/                 # Lab 1: Node.js & Express Server
+│   ├── basic-server.js     # Native Node HTTP server on port 3000
+│   ├── server.js           # Express server with routes /, /about, /time, 404
+│   ├── package.json        # Dependencies and scripts
+│   ├── package-lock.json
+│   ├── .gitignore
+│   ├── README.md           # Detailed Lab 1 documentation & report
+│   └── screenshots/        # Endpoint verification screenshots
+└── lab-02/                 # Lab 2: SQLite Database and CRUD Routes
+    ├── app.js              # Express app with initializeDBAndServer & 5 CRUD routes
+    ├── books.db            # SQLite database with 10 seeded records
+    ├── init-db.js          # SQLite database seeder script
+    ├── test-endpoints.js   # Automated endpoint test suite
+    ├── postman_collection.json # Complete Postman test collection
+    ├── package.json        # Dependencies (express, sqlite, sqlite3, nodemon)
     ├── package-lock.json
     ├── .gitignore
-    ├── README.md           # Detailed Lab 1 documentation & report
-    └── screenshots/        # Endpoint verification screenshots
+    ├── README.md           # Detailed Lab 2 documentation & lab report
+    └── screenshots/        # Route verification screenshots
 ```
