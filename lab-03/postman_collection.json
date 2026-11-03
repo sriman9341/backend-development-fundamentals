@@ -1,0 +1,411 @@
+{
+  "info": {
+    "_postman_id": "bdf-lab-03-rest-api-query-params",
+    "name": "BDF Lab 3 - REST API, Query Parameters, Validation and Debugging",
+    "description": "Postman Collection for Lab 3: REST API, Query Parameters, Validation and Debugging.\nStudent: B. UDAY SAI SRIMAN (252U1R8005)\nCourse: Backend Development Fundamentals\nFaculty: Sai Siva Teja\nCollege: Aurora",
+    "schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+  },
+  "variable": [
+    {
+      "key": "baseUrl",
+      "value": "http://localhost:3000",
+      "type": "string"
+    }
+  ],
+  "item": [
+    {
+      "name": "0. Root - API Information",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/",
+          "host": ["{{baseUrl}}"],
+          "path": [""]
+        },
+        "description": "Root endpoint returning student details, course info, endpoints, and supported query parameters."
+      },
+      "response": []
+    },
+    {
+      "name": "1. GET All Books (Default)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"]
+        },
+        "description": "Retrieve all books using default sorting (order_by=id, order=ASC, limit=10, offset=0)."
+      },
+      "response": []
+    },
+    {
+      "name": "2. GET Book by ID (Existing)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["books", "1"]
+        },
+        "description": "Retrieve a single book by ID 1. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "3. Search Books (search_q=Clean)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?search_q=Clean",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "search_q",
+              "value": "Clean",
+              "description": "Partial title search using SQL LIKE %Clean%"
+            }
+          ]
+        },
+        "description": "Filter books whose title contains 'Clean'. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "4a. Sort Books ASC (order_by=price&order=ASC)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?order_by=price&order=ASC",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "order_by",
+              "value": "price"
+            },
+            {
+              "key": "order",
+              "value": "ASC"
+            }
+          ]
+        },
+        "description": "Sort books by price in ascending order. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "4b. Sort Books DESC (order_by=price&order=DESC)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?order_by=price&order=DESC",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "order_by",
+              "value": "price"
+            },
+            {
+              "key": "order",
+              "value": "DESC"
+            }
+          ]
+        },
+        "description": "Sort books by price in descending order. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "5. Pagination (limit=3&offset=3)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?limit=3&offset=3",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "limit",
+              "value": "3"
+            },
+            {
+              "key": "offset",
+              "value": "3"
+            }
+          ]
+        },
+        "description": "Fetch 3 records skipping the first 3 (page 2 of 3-record pages). Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "6. Minimum Price Filter (min_price=700)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?min_price=700",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "min_price",
+              "value": "700"
+            }
+          ]
+        },
+        "description": "Retrieve books priced at or above ₹700. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "7. Maximum Price Filter (max_price=500)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?max_price=500",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "max_price",
+              "value": "500"
+            }
+          ]
+        },
+        "description": "Retrieve books priced at or below ₹500. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "7b. Combined Price Range Filter (min_price=600&max_price=800)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?min_price=600&max_price=800",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "min_price",
+              "value": "600"
+            },
+            {
+              "key": "max_price",
+              "value": "800"
+            }
+          ]
+        },
+        "description": "Retrieve books within the price range ₹600 - ₹800. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "8. Create Valid Book (POST /books)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Designing Data-Intensive Applications: Practical Guide\",\n  \"author\": \"Martin Kleppmann\",\n  \"price\": 850,\n  \"pages\": 616\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/books",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"]
+        },
+        "description": "Insert a new valid book record. Expected status: 201 Created."
+      },
+      "response": []
+    },
+    {
+      "name": "9. Reject Invalid POST Request (Validation Error)",
+      "request": {
+        "method": "POST",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Book Without Author or Price\"\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/books",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"]
+        },
+        "description": "Send POST request missing author and price. Expected status: 400 Bad Request."
+      },
+      "response": []
+    },
+    {
+      "name": "10. Update Book (PUT /books/:id)",
+      "request": {
+        "method": "PUT",
+        "header": [
+          {
+            "key": "Content-Type",
+            "value": "application/json"
+          },
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "body": {
+          "mode": "raw",
+          "raw": "{\n  \"title\": \"Clean Code: Agile Craftsmanship (Revised Edition)\",\n  \"author\": \"Robert C. Martin\",\n  \"price\": 710,\n  \"pages\": 480\n}"
+        },
+        "url": {
+          "raw": "{{baseUrl}}/books/1",
+          "host": ["{{baseUrl}}"],
+          "path": ["books", "1"]
+        },
+        "description": "Update existing book ID 1 details. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "11. Delete Book (DELETE /books/:id)",
+      "request": {
+        "method": "DELETE",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books/11",
+          "host": ["{{baseUrl}}"],
+          "path": ["books", "11"]
+        },
+        "description": "Delete the newly created book ID 11. Expected status: 200 OK."
+      },
+      "response": []
+    },
+    {
+      "name": "12. Test Non-Existing ID (Verify 404)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books/999",
+          "host": ["{{baseUrl}}"],
+          "path": ["books", "999"]
+        },
+        "description": "Attempt to retrieve non-existing book ID 999. Expected status: 404 Not Found."
+      },
+      "response": []
+    },
+    {
+      "name": "13. SQL Injection Prevention Test (Disallowed Column)",
+      "request": {
+        "method": "GET",
+        "header": [
+          {
+            "key": "Accept",
+            "value": "application/json"
+          }
+        ],
+        "url": {
+          "raw": "{{baseUrl}}/books?order_by=invalid_column;--",
+          "host": ["{{baseUrl}}"],
+          "path": ["books"],
+          "query": [
+            {
+              "key": "order_by",
+              "value": "invalid_column;--"
+            }
+          ]
+        },
+        "description": "Send disallowed order_by column. Expected status: 400 Bad Request."
+      },
+      "response": []
+    }
+  ]
+}
+

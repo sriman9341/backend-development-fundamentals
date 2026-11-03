@@ -21,7 +21,7 @@ Backend Development Fundamentals lab assignments and practical projects complete
 | :---: | :--- | :--- | :---: | :--- | :--- |
 | **Lab 01** | Node.js and Express Server | Node.js, Express.js | Completed | [lab-01/](./lab-01/) | [Render App](https://backend-development-fundamentals-n5u8.onrender.com) |
 | **Lab 02** | SQLite Database and CRUD Routes | Express.js, SQLite3 | Completed | [lab-02/](./lab-02/) | Local Verified / Render Ready |
-| **Lab 03** | *Upcoming Lab* | — | Planned | — | — |
+| **Lab 03** | REST API, Query Parameters & Validation | Express.js, SQLite3 | Completed | [lab-03/](./lab-03/) | Local Verified / Render Ready |
 | **Lab 04** | *Upcoming Lab* | — | Planned | — | — |
 | **Lab 05** | *Upcoming Lab* | — | Planned | — | — |
 | **Lab 06** | *Upcoming Lab* | — | Planned | — | — |
@@ -57,4 +57,15 @@ backend-development-fundamentals/
     ├── .gitignore
     ├── README.md           # Detailed Lab 2 documentation & lab report
     └── screenshots/        # Route verification screenshots
+└── lab-03/                 # Lab 3: REST API, Query Parameters, Validation and Debugging
+    ├── app.js              # Express app with CRUD routes, query parameters & allowlist
+    ├── books.db            # SQLite database with 10 seeded records
+    ├── init-db.js          # SQLite database seeder script
+    ├── test-endpoints.js   # Automated test suite (29 test assertions)
+    ├── postman_collection.json # Ready-to-import Postman test collection
+    ├── package.json        # Dependencies (express, sqlite, sqlite3, nodemon)
+    ├── package-lock.json
+    ├── .gitignore
+    ├── README.md           # Detailed Lab 3 documentation & lab report
+    └── screenshots/        # Endpoint verification screenshots
 ```
